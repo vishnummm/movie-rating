@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie</title>
+    <style>
+    .highlight{
+      width:80%;
+      margin:10px auto;
+      background:orange;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      position: absolute;
+      top:50px;
+      left:50%;
+      transform:translateX(-50%);
+      cursor: pointer;
+      transition: all 1s;
+    }
+    .highlight:hover{
+      padding: 10px;
+    }
+    </style>
+    <script type="text/javascript">
+    window.onload = function(){
+      var isActive = true;
+      document.getElementById('banner').addEventListener("click",function(){
+        if(isActive){
+          document.getElementById('banner').style.top = "300px";
+          document.getElementById('banner').style.background = "white";
+          document.getElementById('banner').style.color = "orange";
+          isActive = false;
+        }
+        else{
+            document.getElementById('banner').style.top = "100px";
+            document.getElementById('banner').style.background = "orange";
+            document.getElementById('banner').style.color = "white";
+              isActive = true;
+        }
+      });
+    }
+    </script>
+  </head>
+  <body>
+    <h1 id="banner" class="highlight">Bitcoin</h1>
+  </body>
+</html>
